@@ -1,5 +1,8 @@
 package com.ihs2code.jackson.json.demo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class Student {
 
 	private int id;
@@ -8,6 +11,8 @@ public class Student {
 	private boolean active;
 	
 	private Address address;
+	
+	private String[] languages;
 	
 	public Student() {
 			
@@ -53,5 +58,14 @@ public class Student {
 		this.address = address;
 	}
 
+	public String[] getLanguages() {
+		return languages;
+	}
+
+	public void setLanguages(String[] languages) {
+		this.languages = languages;
+	}
+
+	
 
 }
